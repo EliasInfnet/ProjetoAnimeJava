@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(url = "https://api.jikan.moe/v3/search/", name = "animeservice")
 public interface AnimeService {
 
-    @GetMapping("anime?q={nome}")
+    @GetMapping("anime?q={nome}&rated=pg13")
     RetornoApi buscarAnime(@PathVariable("nome") String nome);
 }
